@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Maurice</title>
+
+    <script src="https://kit.fontawesome.com/8a63d92c7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+
+    <header class="inicio">
+        <a href="lojinha.html" id="home"><img src="logo.png" height=50 alt="logo"></a>
+    </header>
+
+    <section class="hero">
+        <h1>Mercado Maurice</h1>
+        <h3>Dê adeus às filas e aos preços altos</h3>
+        <hr>
+    </section>
+
+    <section class="sobre">
+        <h2>Por que Mercado Maurice?</h2>
+        <span>
+            <i class="fa-solid fa-stopwatch"></i>
+        </span>
+        <p>
+            Pegar o elevador, ligar o carro, encarar o trânsito, enfrentar filas, pagar estacionamento. Essa é a
+            experiência
+            do passado na hora de se fazer compras. Com Mercado Maurice, você se concentra apenas no essencial: a
+            compra.
+        </p>
+
+        <h2>Como comprar no Mercado Maurice?</h2>
+        <span>
+            <i class="fa-solid fa-basket-shopping"></i>
+        </span>
+        <p>
+            Simples: vá ao Mercado Maurice mais perto do seu apartamento e desbloqueie uma de nossas portas com o nosso
+            app, MauricioPay.
+            Nele, você pode pagar com Pix ou cartões de crédito e débito. Disponível na Apple Store e Google Play
+        </p>
+        <p id="app" style="margin-bottom: 100px;"><br><i class="fa-brands fa-google-play"></i>
+            <i class="fa-brands fa-app-store"></i>
+        </p>
+    </section>
+
+    <section class="sobre" style="background-color: rgb(252, 121, 121);">
+        <div id="login-tela">
+            <h2>Faça seu login no nosso site</h2>
+            <span><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+            <span>
+                <p>Digite o seu e-mail: <input id="login" type="text" placeholder="Digite seu e-mail.." value="" class="texto"></p>
+                <p>Digite sua senha: <input id="senha" type="password" placeholder="Digite sua senha.." value="" class="texto"></p>
+                <button style="margin-bottom: 40px; margin-top: 20px" onclick="fazerLogin()">Fazer login</button>
+            </span>
+            <h3 style="margin-bottom: 40px;" id="h3">Não possui cadastro? <button id="cadastro"
+                    onclick="fazerCadastro()">Clique aqui</button></h3>
+        </div>
+
+        <div id="cadastro-div" style="display: none; margin-top: 60px;">
+            <p>Digite seu nome: <input type="text" id="nome-cadastro" placeholder="Digite seu nome.." value="" class="texto"></p>
+            <p>Digite seu e-mail: <input type="text" id="email-cadastro" placeholder="Digite seu e-mail.." value="" class="texto"></p>
+            <p>Digite sua senha: <input type="text" id="senha-cadastro"  placeholder="Digite sua senha.." value="" class="texto"></p>
+            <p>Digite sua idade: <input type="number" id="idade-cadastro"  placeholder="Digite sua idade.." value=""></p>
+            <button onclick="concluirCadastro()">Concluir Cadastro</button>
+        </div>
+
+    </section>
+
+    <section class="produtos">
+        <h2 style="margin-bottom: 10px;">Bem-vindo(a), <span id="nome-tela-compras"></span>. Você tem <span id="hype"></span> pontos hype</h2>
+        <h2>Confira nossos produtos</h2>
+        <span>
+            <i class="fa-solid fa-drumstick-bite"></i>
+        </span>
+        <br>
+        <div class="produtos-home">
+            <div class="linha">
+                <div class="index-produtos">
+                    <p>Leite 1L</p>
+                    <img src="leite.jpg" alt="leite" width=200 height=200>
+                    <p>R$<span class="precos"></span></p>
+                    <p>Qtd.: <input class="qtds" type="number" id="leite" min="0" value="0"></p>
+                </div>
+                <div class="index-produtos">
+                    <p>Feijão kg</p>
+                    <img src="feijao.jpg" alt="feijao" width=200 height=200>
+                    <p>R$<span class="precos"></span></p>
+                    <p>Qtd.: <input class="qtds" type="number" id="feijao" min="0" value="0"></p>
+                </div>
+                <div class="index-produtos">
+                    <p>Bolo de mirtilo</p>
+                    <img src="bolo.png" alt="bolo de mirtilo" width=200 height=200>
+                    <p>R$<span class="precos"></span></p>
+                    <p>Qtd.: <input class="qtds" type="number" id="bolo" min="0" value="0"></p>
+                </div>
+            </div>
+            <div class="linha" id="bebida">
+                <div class="index-produtos">
+                    <p>Corote</p>
+                    <img src="corote.jpg" alt="corote" width=200 height=200>
+                    <p>R$<span class="precos"></span></p>
+                    <p>Qtd.: <input class="qtds" type="number" id="corote" min="0" value="0"></p>
+                </div>
+                <div class="index-produtos">
+                    <p>Cachaça 51</p>
+                    <img src="51bebida.jpg" alt="51" width=200 height=200>
+                    <p>R$<span class="precos"></span></p>
+                    <p>Qtd.: <input class="qtds" type="number" id="51bebida" min="0" value="0"></p>
+                </div>
+                <div class="index-produtos">
+                    <p>Vinho Mateus</p>
+                    <img src="vinho.jpg" alt="vinho" width=200 height=200>
+                    <p>R$<span class="precos"></span></p>
+                    <p>Qtd.: <input class="qtds" type="number" id="vinho" min="0" value="0"></p>
+                </div>
+            </div>
+        </div>
+        <h3 style="margin-bottom: 30px; margin-top: 30px;">Total: R$<span id="total"></span></h3>
+        <button onclick="fazerPedido()">Fazer Compra</button>
+        <button onclick="sairDaConta()">Sair da minha conta</button>
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

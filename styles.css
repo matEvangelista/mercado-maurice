@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*HEADER E NAV*/
+header {
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgb(252, 121, 121);
+    position: fixed;
+    box-shadow: 0 0 5px rgb(19, 1, 35);
+    z-index: 1;
+}
+
+/*HERO*/
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(hero.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 7vh;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font-size: 5vh;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.hero hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+/*SOBRE*/
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(143, 1, 1);
+    background-color: rgb(243, 184, 184);
+}
+
+.sobre input {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.sobre h2,
+.produtos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.produtos h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+
+.sobre-receitas img {
+    border-radius: 10px;
+}
+
+.sobre i,
+.produtos i {
+    font-size: 2rem;
+    margin: 0 30px;
+    margin-bottom: 30px;
+}
+
+.sobre p,
+.produtos p {
+    font-size: 1.4rem;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.sobre input {
+    width: 300px;
+    padding: 5px;
+}
+
+#app i {
+    cursor: pointer;
+}
+
+/*PRODUTOS*/
+.produtos {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    color: rgb(143, 1, 1);
+    background-color: rgb(240, 150, 150);
+}
+
+button {
+    background-color: rgb(143, 1, 1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+}
+
+#cadastro {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(177, 44, 44);
+}
+
+button:active {
+    background-color: rgb(81, 5, 5);
+}
+
+.produtos-home {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.linha {
+    display: flex;
+    gap: 30px;
+}
+
+input {
+    align-self: center;
+    width: 60px;
+    font-size: 1.4rem;
+    color: rgb(143, 1, 1);
+}
+
+.index-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
